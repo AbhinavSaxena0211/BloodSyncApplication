@@ -1,0 +1,228 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  text-align: center;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #b71c1c;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcccb;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #f44336, #e57373);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #fff;
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero .btn:hover {
+  background: #ffeaea;
+  color: #b71c1c;
+}
+
+/* Form Styling */
+.form-container {
+  background: #ffffff;
+  width: 50%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.form-container h3 {
+  margin-bottom: 15px;
+  color: #d32f2f;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.form-container button {
+  background: #d32f2f;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.form-container button:hover {
+  background: #b71c1c;
+}
+
+/* Footer */
+footer {
+  background: #b71c1c;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+/* Admin Dashboard Layout */
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  width: 85%;
+}
+
+/* Dashboard Cards */
+.card {
+  background: #ffffff;
+  color: #d32f2f;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 28%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #b71c1c;
+}
+
+.card p {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Content Section */
+.content {
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: center;
+}
+
+th {
+  background: #d32f2f;
+  color: white;
+}
+
+td button {
+  padding: 8px 14px;
+  margin: 4px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+.approve {
+  background: #43a047;
+  color: white;
+}
+
+.reject {
+  background: #e53935;
+  color: white;
+}
