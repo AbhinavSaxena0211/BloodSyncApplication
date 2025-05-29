@@ -50,5 +50,36 @@ public class BloodDonorDao {
 		rs.close();
 		return donors;
 	}
-
+	public static boolean deleteDonor(int id) throws SQLException{
+		conn = DBConnection.getConnection();
+		String query = "DELETE FROM blood_donors WHERE donor_id = ?";
+		PreparedStatement ps = conn.prepareStatement(query);
+		ps.setInt(1, id);
+		
+		int executeUpdate = ps.executeUpdate();
+		return executeUpdate>0;
+	}
+	
+	public static boolean updateDonor(int id, int units) throws SQLException{
+		conn = DBConnection.getConnection();
+		String query = "UPDATE blood_donors SET blood_unit=? WHERE donor_id = ?";
+		PreparedStatement ps = conn.prepareStatement(query);
+		ps.setInt(1, units);
+		ps.setInt(2, id);
+		conn.setAutoCommit(false);
+		int ans = ps.executeUpdate();
+		System.out.println("Answer from update units : "+ans);
+		
+		int updateStock = BloodStockDao.updateStock(id, units);
+		System.out.println("Answer from update Stock : "+updateStock);
+		if(ans>0 && updateStock>0) {
+			conn.setAutoCommit(true);
+			return true;
+		}else {
+			conn.rollback();
+			return false;
+		}
+		
+	}
 }
+
